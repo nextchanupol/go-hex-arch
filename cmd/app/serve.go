@@ -7,14 +7,15 @@ import (
 	"os/signal"
 
 	"github.com/gofiber/fiber/v2"
+	hlps "github.com/nextchanupol/go-fiber-server/utils"
 )
 
 func serve(addr string, port string, app *fiber.App) {
 	go func() {
 
-		// logging.Info(fmt.Sprintf("Starting server on %s:%s ...", addr, port))
+		hlps.Info(fmt.Sprintf("Starting server on %s:%s ...", addr, port))
 		err := app.Listen(fmt.Sprintf("%s:%s", addr, port))
-		// logging.Fatal(err.Error())
+		hlps.Fatal(err.Error())
 		log.Fatalf("error opening file: %v", err)
 	}()
 

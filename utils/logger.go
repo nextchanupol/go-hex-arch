@@ -1,4 +1,4 @@
-package mylog
+package hlps
 
 import (
 	"go.uber.org/zap"
