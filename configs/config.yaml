@@ -1,0 +1,9 @@
+app:
+  addr: localhost
+  port: 3000
+
+db:
+  driver: postgres
+  host: postgres://postgres:postgres@localhost:5432/phoom?sslmode=disable
+  max_open_conn: 4
+  max_idle_conn: 4
